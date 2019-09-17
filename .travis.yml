@@ -5,7 +5,7 @@ before_script:
 - yes | python setup.py install
 - git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
 script:
-- "./run_tests.sh"
+- ./run_tests.sh
 deploy:
   provider: s3
   access_key_id: AKIAJ2CEZVTSFRBCKRJQ
