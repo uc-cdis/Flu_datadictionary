@@ -5,16 +5,16 @@ before_script:
 - yes | python setup.py install
 - git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
 script:
-- ./run_tests.sh
+- "./run_tests.sh"
 deploy:
   provider: s3
-  access_key_id: AKIAJ2CEZVTSFRBCKRJQ
+  access_key_id: AKIAZRNPHKJIPRRTEJUI
   secret_access_key:
-    secure: og3FLG+lq3d00+sYGRRh0xfqAO4KaPR8zOR9QRQY1z5HjR8AbwAvwJMLQRC7LX6Fc+Md+lkDWgt6plZ830jO1PwVQovaEKtW2c1gzlSqw+xqA2ZEvkDgyMf2Lsi6C6RJHBVmqc0BH3NYjT2Q2cPzWvCrKbnkinLHmGIhKDhqnd/9HH+gbpCTL4tjzoy3UxZYvGGuI1EsRMddJa8vKowa3fh9dt6V7xTM6gx5bAfqWaZ655DqiAMwaI2SaLxkW2OCRM0sxNXQjmDX8t2NaK9srzH4fGWn2aZWIp6MsGb7r0VpxUA4gMGYpSE4oBShs5+3sSPffte/sf4a2BfzY+n0XGE5kRbqCDYF/w7q9ffyEtUW6trCFD2lCkdnWXVslC04uNYQxeUv4jT2iRDqVntoWlC5fuiYIVJ0s+Wv4nMJB5shuKCG5zeWrpw+D39TvaOwJ2YN/cNJ/aBQFQBMyrYu2xkdG3kE2aAJa2SOMKXVzVjPRpxERSWtZxpMTwVDCJsXuYysvVrBAeTpJJ6kY7dauBMvCX+EbA8HaOayRRP42H3Ldvtnf277lhYOMPCh8+81FovEMFvgFjR/dtcgE/qdTAlDvwt2JZ3iCwLHNBros7P5xL0ZXLpU5b/0HB6hdyON4w+splKcqhnHzRcihfRG0eIx8kbrKj1M/radx6sYIS8=
+    secure: gUl+Di8ep9tmxfS8r3rjrTs8vzeDEFtdkzHafUSVr+Hfd/oyW0crxrJqxIB9NJU+Q28jjeI7Wfo58Fa+LjPgYS7F7QyQDMn4n/VXh6K/Yx7mSdjX+NjMJsYKVvk+9rPMZcVNrGBY9CI3lM003CPeYk8wLvkeMku/xOwk4yylEYZ/0UZw7UU1yirE7NjwVC0yH9Kqyhj3kpx8fmwOlmw5tyvjLrI3roYnX/B/xZ4Qkoiu9NEk00oKLbcFv+bSEwSxQyW/umJMyu2P/pkExciPwDX3U2v2Q/xLCrrpiwMkDcWo0L0likKs8+kH3WG2C45zUotmwgNdSZEfzZY/DRhxJzoelnDVhmE0RQnh4cw5sNscURiZLnOyCDI3a89miKludmN3qjI5GVxs74AmGhhp4E88uL5ZUypVpJCRVBgazBp4rqBzCn0dm0m7WyTW2/ScCALrzyNMhi3mTdsvyU884xXJr2619t6GeuCQzjHNe64F6vNFgYXNXx5Q2DUFzD1dC4yoiOrZKAqy5bsWJzLvDGt0xa8J54VaLY2Eq8WqivGIMBWs02satmiaqhYnoo+lmqppGDMyc5V65eZHUuIXzRKzdMcm4ccTtf7j8slzy/MQY51zPrPpP/N1P3cda97NnQMqLrmkhs3jjSOo43bb+yeRqmXFh3PZwGyDetLPt1Q=
   bucket: dictionary-artifacts
   local-dir: artifacts
-  upload-dir: ndhdictionary/$TRAVIS_BRANCH
+  upload-dir: flu-datadictionary/$TRAVIS_BRANCH
   skip_cleanup: true
   on:
-    repo: uc-cdis/ndhdictionary
+    repo: uc-cdis/Flu_datadictionary
     all_branches: true
